@@ -1,0 +1,19 @@
+'User' Icon in Navigation :
+<i class="fas fa-user"></i>
+
+'Laptop Code' Icon in Navigation : 
+<i class="fas fa-laptop-code"></i>
+
+'social media' icon :
+<i class="fab fa-instagram"></i>
+<i class="fab fa-github"></i>
+<i class="fab fa-linkedin"></i>
+
+'link' icon : 
+<i class="fas fa-link"></i>
+
+'times/close' icon : 
+<i class="fas fa-times"></i>
+
+'right sign' icon : 
+<i class="fas fa-chevron-right"></i>

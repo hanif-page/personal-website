@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Ammar Hanif</title>
+    <link rel="stylesheet" href="./styles/build.css">
+
+    <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- 
+        Checknotes ✅️ 
+        - Make bottom navigation ✅️
+        - Make right navigation (...)
+        - Setting up the position of the main container, for desktop it will be not in the center, but a little move to the left (...)
+        - Set the top wavy shape, and bottom shape (below copyright)
+        - Make copyright text
+        - Make 'about me' section (...)
+        - Make 'project portfolio' section (...)
+        - Set up all the link inside website (my social media) (...)
+        - Set up all the dark mode class (...)
+
+        - Set the overlay modal (for each project that getting displayed) (...)
+        - . . . . .
+     -->
+
+    <!-- main container -->
+    <div class="container min-h-[300vh]"></div>
+
+    <!-- desktop navigation (still under construction) -->
+    <div class="right-navigation hidden lg:flex flex-col h-[222px] w-[88px] py-6 px-3 dark:bg-my-black fixed right-3 top-1/2 transform -translate-y-1/2">
+        <a href="" class="transition duration-500 hover:opacity-75 aboutMe-icon">
+            <i class="fas fa-user text-my-black dark:text-my-white"></i>
+        </a>
+        <a href="" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
+            <i class="fas fa-laptop-code text-my-black dark:text-my-white"></i>
+        </a>
+        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center px-2 relative dark:bg-my-white">
+             <!-- 
+                 so, we make :
+                 - 2 text (one of the text will be 0 opacity, at each specific condition)
+                    - dark (opacity 1 if dark mode on, opacity 0 if dark mode off)
+                    - light (opacity 1 if light mode on, opacity 0 if light mode off)
+                 - one circle (that will be slided if we clicked the toggle) 
+            -->
+            <span class="textDark select-none text-my-black font-medium text-[10px] capitalize mr-1 opacity-0 transition duration-300">dark</span>
+            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-orange"></div>
+            <span class="textLight select-none text-my-black font-medium text-[10px] capitalize ml-1 transition duration-300">light</span>
+        </div>
+    </div>
+
+    <!-- the mobile navigation -->
+    <div class="lg:hidden bottom-navigation flex w-[264px] py-3 px-6 space-x-9 mx-auto dark:bg-my-black fixed bottom-3 left-1/2 transform -translate-x-1/2">
+        <a href="" class="transition duration-500 hover:opacity-75 aboutMe-icon">
+            <i class="fas fa-user text-my-black dark:text-my-white"></i>
+        </a>
+        <a href="" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
+            <i class="fas fa-laptop-code text-my-black dark:text-my-white"></i>
+        </a>
+        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center px-2 relative dark:bg-my-white">
+             <!-- 
+                 so, we make :
+                 - 2 text (one of the text will be 0 opacity, at each specific condition)
+                    - dark (opacity 1 if dark mode on, opacity 0 if dark mode off)
+                    - light (opacity 1 if light mode on, opacity 0 if light mode off)
+                 - one circle (that will be slided if we clicked the toggle) 
+            -->
+            <span class="textDark select-none text-my-black font-medium text-[10px] capitalize mr-1 opacity-0 transition duration-300">dark</span>
+            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-orange"></div>
+            <span class="textLight select-none text-my-black font-medium text-[10px] capitalize ml-1 transition duration-300">light</span>
+        </div>
+    </div>  
+
+    <script>
+        const colorModeToggle = document.querySelectorAll(".colorMode-toggle")
+        colorModeToggle.forEach(colorToggle => {
+            colorToggle.addEventListener('click', function(){
+            const circleSlided = this.querySelector(".circle-slided")
+                circleSlided.classList.toggle("-translate-x-4")
+                circleSlided.classList.toggle("translate-x-4")
+            const textDark = this.querySelector(".textDark")
+                textDark.classList.toggle("opacity-0")
+                textDark.classList.toggle("opacity-1")
+            const textLight = this.querySelector(".textLight")
+                textLight.classList.toggle("opacity-0")
+
+            const html = document.querySelector("html")
+                html.classList.toggle("dark")
+            })
+        })
+
+    </script>
+</body>
+</html>

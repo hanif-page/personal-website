@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components
+{
+    * 
+    {
+        transition: color .5s, background-color .5s;
+    }
+
+    .fa-user, .fa-laptop-code
+    {
+        font-size: 2.25em;
+    }
+
+    .bottom-navigation, .right-navigation
+    {
+        border-radius: 2.25rem;
+        box-shadow: 0 0 6px rgba(0,0,0,.18);
+    }
+}
