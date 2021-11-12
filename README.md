@@ -6,4 +6,4 @@
 - Vanilla HTML and JavaScript
 - Tailwind CSS
 
-Live Preview (unfinish yet) : [click here]()
+Live Preview (unfinish yet) : [click here](https://hanif-page.netlify.app/)
