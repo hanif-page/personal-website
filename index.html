@@ -9,36 +9,121 @@
 
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark:bg-my-black overflow-x-hidden">
 
     <!-- 
         Checknotes ✅️ 
         - Make bottom navigation ✅️
-        - Make right navigation (...)
-        - Setting up the position of the main container, for desktop it will be not in the center, but a little move to the left (...)
-        - Set the top wavy shape, and bottom shape (below copyright)
+        - Make right navigation ✅️
+        - Setting up the position of the main container, for desktop it will be not in the center, but a little move to the left ✅️
+        - Set the top wavy shape ✅️ 
+        - Set the bottom shape  
         - Make copyright text
-        - Make 'about me' section (...)
+        - Make 'about me' section ✅️
         - Make 'project portfolio' section (...)
-        - Set up all the link inside website (my social media) (...)
+        - Set up all the link inside website 
         - Set up all the dark mode class (...)
+        - Set typed js (Muhammad Ammar Hanif)
 
         - Set the overlay modal (for each project that getting displayed) (...)
-        - . . . . .
+        . . . . .
      -->
 
-    <!-- main container -->
-    <div class="container min-h-[300vh]"></div>
+    <img src="./assets/wave-top.svg" alt="" class="vector-light absolute z-0 transform rotate-180 w-full">
+    <img src="./assets/wave-top-white.svg" class="vector-light hidden absolute z-0 transform rotate-180 w-full" alt="">
 
-    <!-- desktop navigation (still under construction) -->
-    <div class="right-navigation hidden lg:flex flex-col h-[222px] w-[88px] py-6 px-3 dark:bg-my-black fixed right-3 top-1/2 transform -translate-y-1/2">
-        <a href="" class="transition duration-500 hover:opacity-75 aboutMe-icon">
+    <!-- main container -->
+    <div class="px-5 mx-auto w-full relative z-10 xs:px-10 smV2:px-20 lg:w-[85%] lg:ml-9 lg:px-0 xl:ml-14 min-h-screen text-lg dark:text-my-white">
+        <div id="aboutMe" class="about-me flex flex-col justify-center min-h-screen">
+            
+            <!-- profile card - under 1024px width screen -->
+            <div class="flex flex-col items-center mt-5 rounded-[20px] lg:hidden">
+                <div class="flex flex-col items-center md:flex-row-reverse md:justify-between">
+                    <img src="./assets/img/mypict.png" alt="Hanif Profile Picture" class="w-32 h-32 rounded-full border-4 border-my-orange object-cover object-center md:w-40 md:h-40 dark:border-my-white">
+
+                    <div class="mt-8 text-center md:text-left md:mt-0 md:w-9/12">
+                        <h1 class="text-xl text-my-black md:text-[22px] dark:text-my-white">
+                            Hi, my name is <br>
+                            <span class="capitalize font-bold">muhammad ammar hanif</span>
+                        </h1>
+                        <p class="text-sm md:text-base">
+                            People usually call me Hanif. I have an interest in tech stuff, like coding and make something that base on a technology.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center mt-8 space-y-3">
+                    <div class="space-x-4">
+                        <a class="hover:opacity-50" href="https://www.instagram.com/amrrhaniff/" target="_blank">
+                            <i class="text-[40px] fab fa-instagram"></i>
+                        </a>
+                        <a class="hover:opacity-50" href="https://github.com/hanif-page" target="_blank">
+                            <i class="text-[40px] fab fa-github"></i>
+                        </a>
+                        <a class="hover:opacity-50" href="https://www.linkedin.com/in/ammar-hanif-b41b1a215/" target="_blank">
+                            <i class="text-[40px] fab fa-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <a href="#" class="capitalize text-lg text-my-black underline hover:opacity-50 dark:text-my-white">contact me!</a>
+                </div>
+            </div>
+
+            <!-- profile card - above 1024px width screen -->
+            <div class="hidden flex-row items-center px-4 py-8 rounded-[20px] md:px-8 lg:flex">
+                <div class="flex flex-col">
+
+                    <div class="text-left w-11/12 mb-6 dark:text-my-white">
+                        <h1 class="text-xl text-my-black md:text-[22px] xl:text-2xl dark:text-my-white">
+                            Hi, my name is <br>
+                            <span class="capitalize font-bold">muhammad ammar hanif</span>
+                        </h1>
+                        <p class="text-sm md:text-base xl:text-lg">
+                            People usually call me Hanif. I have an interest in tech stuff, like coding and make something that base on a technology.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-left mt-8 space-y-3">
+                        <div class="space-x-4">
+                            <a class="hover:opacity-50" href="https://www.instagram.com/amrrhaniff/" target="_blank">
+                                <i class="text-[40px] fab fa-instagram"></i>
+                            </a>
+                            <a class="hover:opacity-50" href="https://github.com/hanif-page" target="_blank">
+                                <i class="text-[40px] fab fa-github"></i>
+                            </a>
+                            <a class="hover:opacity-50" href="https://www.linkedin.com/in/ammar-hanif-b41b1a215/" target="_blank">
+                                <i class="text-[40px] fab fa-linkedin"></i>
+                            </a>
+                        </div>
+    
+                        <a href="mailto:amrhanif15@gmail.com?subject=From%20P.W%20%3A%20Hi%2C%20I'm%20%5Byour%20name%5D%20-%20From%20%5Byour%20institution%5D&body=your%20message%20here%20please%20.%20.%20." class="capitalize text-lg text-my-black underline hover:opacity-50 dark:text-my-white">contact me!</a>
+                    </div>
+                </div>
+
+                <img src="./assets/img/mypict.png" alt="Hanif Profile Picture" class="w-60 h-60 rounded-full border-4 border-my-orange object-cover object-center dark:border-my-white">
+            
+            </div>
+
+        </div>
+
+        <div id="projectPortfolio" class="project-portfolio min-h-screen flex flex-col justify-center items-center">
+            <h1 class="font-bold text-xl">Coming Soon</h1>
+        </div>
+
+        <!-- <div class="capitalize text-center text-sm lg:text-base">
+            copyright &copy; 2021. m ammar hanif
+        </div> -->
+    </div>
+
+    <!-- desktop navigation -->
+    <div class="right-navigation bg-my-white hidden lg:flex flex-col justify-center items-center space-y-9 h-[222px] w-[88px] py-6 px-3 dark:bg-my-black dark:border-2 dark:border-my-white fixed right-5 top-1/2 transform -translate-y-1/2">
+        <a href="#aboutMe" class="transition duration-500 hover:opacity-75 aboutMe-icon">
             <i class="fas fa-user text-my-black dark:text-my-white"></i>
         </a>
-        <a href="" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
+        <a href="#projectPortfolio" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
             <i class="fas fa-laptop-code text-my-black dark:text-my-white"></i>
         </a>
-        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center px-2 relative dark:bg-my-white">
+        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center w-[72px] h-[38px] py-3 px-5 relative dark:bg-my-white">
              <!-- 
                  so, we make :
                  - 2 text (one of the text will be 0 opacity, at each specific condition)
@@ -46,21 +131,21 @@
                     - light (opacity 1 if light mode on, opacity 0 if light mode off)
                  - one circle (that will be slided if we clicked the toggle) 
             -->
-            <span class="textDark select-none text-my-black font-medium text-[10px] capitalize mr-1 opacity-0 transition duration-300">dark</span>
-            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-orange"></div>
-            <span class="textLight select-none text-my-black font-medium text-[10px] capitalize ml-1 transition duration-300">light</span>
+            <span class="textDark select-none text-my-black font-bold text-[1.4em] capitalize mr-1.5 opacity-0 transition duration-300"><i class="fas fa-moon"></i></span>
+            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-black"></div>
+            <span class="textLight select-none text-my-white font-bold text-[1.4em] capitalize ml-1.5 transition duration-300"><i class="fas fa-sun"></i></span>
         </div>
     </div>
 
     <!-- the mobile navigation -->
-    <div class="lg:hidden bottom-navigation flex w-[264px] py-3 px-6 space-x-9 mx-auto dark:bg-my-black fixed bottom-3 left-1/2 transform -translate-x-1/2">
-        <a href="" class="transition duration-500 hover:opacity-75 aboutMe-icon">
+    <div class="bottom-navigation bg-my-white flex w-[264px] py-3 px-6 space-x-9 mx-auto dark:bg-my-black dark:border-2 dark:border-my-white fixed z-20 bottom-3 left-1/2 transform -translate-x-1/2 lg:hidden">
+        <a href="#aboutMe" class="transition duration-500 hover:opacity-75 aboutMe-icon">
             <i class="fas fa-user text-my-black dark:text-my-white"></i>
         </a>
-        <a href="" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
+        <a href="#projectPortfolio" class="transition duration-500 hover:opacity-75 projectPortfolio-icon">
             <i class="fas fa-laptop-code text-my-black dark:text-my-white"></i>
         </a>
-        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center px-2 relative dark:bg-my-white">
+        <div class="colorMode-toggle cursor-pointer bg-my-orange rounded-full flex justify-center items-center w-[72px] h-[38px] py-3 px-5 relative dark:bg-my-white">
              <!-- 
                  so, we make :
                  - 2 text (one of the text will be 0 opacity, at each specific condition)
@@ -68,9 +153,9 @@
                     - light (opacity 1 if light mode on, opacity 0 if light mode off)
                  - one circle (that will be slided if we clicked the toggle) 
             -->
-            <span class="textDark select-none text-my-black font-medium text-[10px] capitalize mr-1 opacity-0 transition duration-300">dark</span>
-            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-orange"></div>
-            <span class="textLight select-none text-my-black font-medium text-[10px] capitalize ml-1 transition duration-300">light</span>
+            <span class="textDark select-none text-my-black font-bold text-[1.4em] capitalize mr-1.5 opacity-0 transition duration-300"><i class="fas fa-moon"></i></span>
+            <div class="circle-slided w-[30px] h-[30px] rounded-full bg-my-white absolute z-10 transform -translate-x-4 transition duration-500 dark:bg-my-black"></div>
+            <span class="textLight select-none text-my-white font-bold text-[1.4em] capitalize ml-1.5 transition duration-300"><i class="fas fa-sun"></i></span>
         </div>
     </div>  
 
@@ -78,18 +163,32 @@
         const colorModeToggle = document.querySelectorAll(".colorMode-toggle")
         colorModeToggle.forEach(colorToggle => {
             colorToggle.addEventListener('click', function(){
-            const circleSlided = this.querySelector(".circle-slided")
-                circleSlided.classList.toggle("-translate-x-4")
-                circleSlided.classList.toggle("translate-x-4")
-            const textDark = this.querySelector(".textDark")
-                textDark.classList.toggle("opacity-0")
-                textDark.classList.toggle("opacity-1")
-            const textLight = this.querySelector(".textLight")
-                textLight.classList.toggle("opacity-0")
+                const circlesSlided = document.querySelectorAll(".circle-slided")
+                circlesSlided.forEach(circleSlided => {
+                    circleSlided.classList.toggle("-translate-x-4")
+                    circleSlided.classList.toggle("translate-x-4")
+                })
+                const textDarks = document.querySelectorAll(".textDark")
+                textDarks.forEach(textDark => {
+                    textDark.classList.toggle("opacity-0")
+                    textDark.classList.toggle("opacity-1")
+                })
+                const textLights = document.querySelectorAll(".textLight")
+                textLights.forEach(textLight => {
+                    textLight.classList.toggle("opacity-0")
+                })
+                const vectorLights = document.querySelectorAll(".vector-light")
+                vectorLights.forEach(vector => {
+                    vector.classList.toggle("hidden")
+                })
+                const vectorDarks = document.querySelectorAll(".vector-dark")
+                vectorDarks.forEach(vector => {
+                    vector.classList.toggle("hidden")
+                })
 
-            const html = document.querySelector("html")
-                html.classList.toggle("dark")
-            })
+                const html = document.querySelector("html")
+                    html.classList.toggle("dark")
+                })
         })
 
     </script>

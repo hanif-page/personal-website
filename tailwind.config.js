@@ -11,6 +11,10 @@ module.exports = {
         'my-black':"#333333", 
         'my-orange':"#FFC700",
         'my-gray':"#535353"
+      },
+      screens: {
+        'xs': '420px',
+        'smV2': '640px'
       }
     },
   },
