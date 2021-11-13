@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/build.css">
 
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.0.7/dist/index.umd.js"></script>
 </head>
 <body class="dark:bg-my-black overflow-x-hidden">
 
@@ -17,16 +18,20 @@
         - Make right navigation ✅️
         - Setting up the position of the main container, for desktop it will be not in the center, but a little move to the left ✅️
         - Set the top wavy shape ✅️ 
-        - Set the bottom shape  
-        - Make copyright text
         - Make 'about me' section ✅️
-        - Make 'project portfolio' section (...)
-        - Set up all the link inside website 
-        - Set up all the dark mode class (...)
-        - Set typed js (Muhammad Ammar Hanif)
+        - Make 'project portfolio' section ✅️
+        - Set up dark mode ✅️
+        - Set typed js (Muhammad Ammar Hanif) ✅️
+        - Make copyright text ✅️
 
-        - Set the overlay modal (for each project that getting displayed) (...)
-        . . . . .
+        (break the to do list to each point)
+        - Set the overlay modal (for each project that getting displayed) ...
+        1. Make . . .
+        2. Make . . .
+        3. Code The . . .
+        
+        
+        - Set up all link inside the website
      -->
 
     <img src="./assets/wave-top.svg" alt="" class="vector-light absolute z-0 transform rotate-180 w-full">
@@ -44,7 +49,7 @@
                     <div class="mt-8 text-center md:text-left md:mt-0 md:w-9/12">
                         <h1 class="text-xl text-my-black md:text-[22px] dark:text-my-white">
                             Hi, my name is <br>
-                            <span class="capitalize font-bold">muhammad ammar hanif</span>
+                            <span id="my-name2" class="capitalize font-bold mr-1">muhammad ammar hanif&nbsp;</span>
                         </h1>
                         <p class="text-sm md:text-base dark:text-my-white">
                             People usually call me Hanif. I have an interest in tech stuff, like coding and make something that base on a technology.
@@ -70,13 +75,13 @@
             </div>
 
             <!-- profile card - above 1024px width screen -->
-            <div class="hidden flex-row items-center px-4 py-8 rounded-[20px] md:px-8 lg:flex">
+            <div class="hidden flex-row items-center rounded-[20px] lg:flex">
                 <div class="flex flex-col">
 
                     <div class="text-left w-11/12 mb-6 dark:text-my-white">
                         <h1 class="text-xl text-my-black md:text-[22px] xl:text-2xl dark:text-my-white">
                             Hi, my name is <br>
-                            <span class="capitalize font-bold">muhammad ammar hanif</span>
+                            <span id="my-name" class="my-name capitalize font-bold dark:text-my-white">muhammad ammar hanif&nbsp;</span>
                         </h1>
                         <p class="text-sm md:text-base xl:text-lg">
                             People usually call me Hanif. I have an interest in tech stuff, like coding and make something that base on a technology.
@@ -106,13 +111,30 @@
 
         </div>
 
-        <div id="projectPortfolio" class="project-portfolio min-h-screen flex flex-col justify-center items-center">
-            <h1 class="font-bold text-xl">Coming Soon</h1>
+        <div id="projectPortfolio" class="project-portfolio min-h-screen flex flex-col justify-center items-center space-y-8 mb-24 lg:mb-0">
+
+            <h1 class="text-my-black text-2xl text-center font-bold dark:text-my-white">Project Portfolio</h1>
+
+            <!-- project thumbnail container -->
+            <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                    <img src="./assets/img/project/project-1/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
+                </div>
+                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                    <img src="./assets/img/project/project-2/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
+                </div>
+                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                    <img src="./assets/img/project/project-3/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
+                </div>
+                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                    <img src="./assets/img/project/project-4/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
+                </div>
+            </div>
         </div>
 
-        <!-- <div class="capitalize text-center text-sm lg:text-base">
+        <div class="py-7 relative -top-14 text-my-black capitalize text-center text-sm lg:text-base lg:top-0 lg:pb-2 dark:text-my-white">
             copyright &copy; 2021. m ammar hanif
-        </div> -->
+        </div>
     </div>
 
     <!-- desktop navigation -->
@@ -160,6 +182,20 @@
     </div>  
 
     <script>
+        // typing animation
+
+        const typingOptions = {
+            speed: 150,
+            loop: true, 
+            deleteSpeed: 150,
+        }
+        new TypeIt("#my-name", typingOptions)
+            .pause(3000)
+            .go();
+        new TypeIt("#my-name2", typingOptions)
+            .pause(3000)
+            .go();
+
         const colorModeToggle = document.querySelectorAll(".colorMode-toggle")
         colorModeToggle.forEach(colorToggle => {
             colorToggle.addEventListener('click', function(){

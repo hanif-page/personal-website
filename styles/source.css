@@ -32,4 +32,9 @@
     {
         box-shadow: 0 0 16px rgba(0,0,0, .2)
     }
+
+    #projectPortfolio
+    {
+        scroll-margin-top: 2.5rem;
+    }
 }
