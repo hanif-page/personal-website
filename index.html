@@ -26,7 +26,7 @@
 
         (break the to do list to each point)
         - Set the overlay modal (for each project that getting displayed) ...
-        1. Make . . .
+        1. Set the container for the project modal/overlay UI ✅️ 
         2. Make . . .
         3. Code The . . .
         
@@ -117,16 +117,16 @@
 
             <!-- project thumbnail container -->
             <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div onclick="openProjectModal(this)" data-id="1" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-1/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div onclick="openProjectModal(this)" data-id="2" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-2/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div onclick="openProjectModal(this)" data-id="3" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-3/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div onclick="openProjectModal(this)" data-id="4" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-4/1.png" alt="" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
             </div>
@@ -181,9 +181,20 @@
         </div>
     </div>  
 
-    <script>
-        // typing animation
+    <!-- project modal/overlay -->
+    <div id="projectModal" class="space-y-10 flex flex-col justify-center items-center fixed inset-0 z-20 bg-black bg-opacity-75 transition duration-1000">
 
+        <!-- container -->
+        <div class="w-3/4 md:w-2/3 min-h-[360px] border border-white flex flex-col justify-center items-center relative">
+            <i onclick="closeProjectModal()" class="fas fa-times text-3xl text-my-white absolute -top-10 right-0 cursor-pointer hover:text-my-orange"></i>
+
+            <h1 class="font-bold text-my-white text-center text-3xl capitalize">coming soon</h1>
+        </div>
+        
+    </div>
+
+    <script>
+        // typing animation on my name
         const typingOptions = {
             speed: 150,
             loop: true, 
@@ -196,6 +207,7 @@
             .pause(3000)
             .go();
 
+        // dark mode functionality
         const colorModeToggle = document.querySelectorAll(".colorMode-toggle")
         colorModeToggle.forEach(colorToggle => {
             colorToggle.addEventListener('click', function(){
@@ -227,6 +239,23 @@
                 })
         })
 
+        const projectModal = document.querySelector("#projectModal")
+        
+        // open modal/overlay
+        function openProjectModal(e)
+        {
+            document.querySelector("body").style.overflow = "hidden"
+            projectModal.classList.add("opened")
+
+            console.log(e.dataset.id)
+        }
+        // close modal/overlay
+        function closeProjectModal()
+        {
+            projectModal.classList.remove("opened")
+            document.querySelector("body").style.overflow = "auto"
+
+        }
     </script>
 </body>
 </html>

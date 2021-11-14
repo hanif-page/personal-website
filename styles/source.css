@@ -37,4 +37,16 @@
     {
         scroll-margin-top: 2.5rem;
     }
+
+    #projectModal 
+    {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #projectModal.opened 
+    {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
