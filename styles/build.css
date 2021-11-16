@@ -736,6 +736,18 @@ html
   right: 0px;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -821,12 +833,24 @@ html
   height: 30px;
 }
 
+.h-3\/5 {
+  height: 60%;
+}
+
+.h-2\/5 {
+  height: 40%;
+}
+
+.max-h-\[70vh\] {
+  max-height: 70vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
-.min-h-\[360px\] {
-  min-height: 360px;
+.min-h-\[60vh\] {
+  min-height: 60vh;
 }
 
 .w-full {
@@ -861,8 +885,8 @@ html
   width: 264px;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-10\/12 {
+  width: 83.333333%;
 }
 
 .-translate-y-1\/2 {
@@ -999,11 +1023,6 @@ html
   border-color: rgba(51, 51, 51, var(--tw-border-opacity));
 }
 
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
-}
-
 .bg-my-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -1104,6 +1123,11 @@ html
   line-height: 2.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1122,12 +1146,21 @@ html
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.text-my-orange {
+  --tw-text-opacity: 1;
+  color: rgba(255, 199, 0, var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration: underline;
 }
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .transition {
@@ -1158,6 +1191,10 @@ html
 .hover\:text-my-orange:hover {
   --tw-text-opacity: 1;
   color: rgba(255, 199, 0, var(--tw-text-opacity));
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .group:hover .group-hover\:scale-125 {
@@ -1193,6 +1230,12 @@ html
 .dark .dark\:hover\:text-my-orange:hover {
   --tw-text-opacity: 1;
   color: rgba(255, 199, 0, var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-3\/4 {
+    width: 75%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1263,12 +1306,32 @@ html
     display: none;
   }
 
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:min-h-\[60vh\] {
+    min-height: 60vh;
+  }
+
   .lg\:w-\[85\%\] {
     width: 85%;
   }
 
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:px-0 {
