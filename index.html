@@ -7,6 +7,9 @@
     <title>M Ammar Hanif</title>
     <link rel="stylesheet" href="./styles/build.css">
 
+    <!-- force browser to replace unsecure connection (http) to secured connection (https) -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typeit@8.0.7/dist/index.umd.js"></script>
 </head>
@@ -288,15 +291,22 @@
             const projectImgSrc = `./assets/img/project/project-${e.dataset.id}/1.png`
             const projectImgElement = document.querySelector(".image-slider-container img")
             
-            projectImgElement.src = projectImgSrc            
+            projectImgElement.src = projectImgSrc 
         }
         // close modal/overlay
         function closeProjectModal()
         {
             projectModal.classList.remove("opened")
             document.querySelector("body").style.overflow = "auto"
-
         }
+
+        // json experiment
+        const jsonSrc = "./project-information.json"
+        const projectID = "project1"
+        fetch(jsonSrc)
+            .then(res => res.json())
+            .then(res => console.log(res[projectID]))
+            .catch(res => console.log(res))
     </script>
 </body>
 </html>

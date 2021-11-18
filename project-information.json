@@ -1,0 +1,25 @@
+{
+    "project1": {
+        "imgSources": {
+            "img1": "./assets/img/project/project-1/1.png",
+            "img2": "./assets/img/project/project-1/2.png",
+            "img3": "./assets/img/project/project-1/3.png",
+            "img4": "./assets/img/project/project-1/4.png"
+        },
+        "projectName": "INAculture",
+        "dateFinish": "August 2021",
+        "projectDesc": "INAculture is a . . . . (coming soon)",
+        "liveWebLink": "https://inaculture.netlify.app/",
+        "githubRepoLink": "https://github.com/hanif-page/INAculture"
+    },
+    "project2": {
+
+    },
+    "project3": {
+
+    },
+    "project4": {
+
+    },
+    "error": "Wrong Project ID! Please use the known Project ID"
+}
