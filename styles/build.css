@@ -841,6 +841,10 @@ html
   height: 30px;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-3\/5 {
   height: 60%;
 }

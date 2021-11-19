@@ -8,18 +8,48 @@
         },
         "projectName": "INAculture",
         "dateFinish": "August 2021",
-        "projectDesc": "INAculture is a . . . . (coming soon)",
+        "projectDesc": "INAculture merupakan sebuah organisasi berbentuk platform yang ikut serta dalam pelestarian Budaya dan Alam di Indonesia dalam bidang Internet. Made with vanilla HTML, CSS, and JS (*note: this is just the design of the platform)",
         "liveWebLink": "https://inaculture.netlify.app/",
         "githubRepoLink": "https://github.com/hanif-page/INAculture"
     },
     "project2": {
-
+        "imgSources": {
+            "img1": "./assets/img/project/project-2/1.png",
+            "img2": "./assets/img/project/project-2/2.png",
+            "img3": "./assets/img/project/project-2/3.png",
+            "img4": "./assets/img/project/project-2/4.png"
+        },
+        "projectName": "Blognesia",
+        "dateFinish": "October 2021",
+        "projectDesc": "Blognesia is a blogging platform for people who wants to share their story about indonesian culture. Made with vanilla HTML, CSS, and JS (*note: this is just the design of the platform)",
+        "liveWebLink": "https://blognesia.netlify.app/",
+        "githubRepoLink": "https://github.com/hanif-page/blognesia"
     },
     "project3": {
-
+        "imgSources": {
+            "img1": "./assets/img/project/project-3/1.png",
+            "img2": "./assets/img/project/project-3/2.png",
+            "img3": "./assets/img/project/project-3/3.png",
+            "img4": "./assets/img/project/project-3/4.png"
+        },
+        "projectName": "Loopstudios Landing Page",
+        "dateFinish": "June 2021",
+        "projectDesc": "This is one of the junior challenge on frontendmentor.io site. I build it with extra css framework, which is Tailwind CSS. The rest of the tools, is vanilla HTML and JS",
+        "liveWebLink": "https://hanif-page.github.io/loopstudios-landing-page-main/",
+        "githubRepoLink": "https://github.com/hanif-page/loopstudios-landing-page-main"
     },
     "project4": {
-
+        "imgSources": {
+            "img1": "./assets/img/project/project-4/1.png",
+            "img2": "./assets/img/project/project-4/2.png",
+            "img3": "./assets/img/project/project-4/3.png",
+            "img4": "./assets/img/project/project-4/4.png"
+        },
+        "projectName": "Banking System",
+        "dateFinish": "-",
+        "projectDesc": "It's a non-database banking system that I build with python, it can be accessed and use by the Terminal. Build it with original Python",
+        "liveWebLink": "https://github.com/hanif-page/banking-system",
+        "githubRepoLink": "https://github.com/hanif-page/banking-system"
     },
     "error": "Wrong Project ID! Please use the known Project ID"
 }
