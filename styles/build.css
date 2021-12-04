@@ -740,8 +740,8 @@ html
   left: 0.5rem;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-1 {
+  bottom: 0.25rem;
 }
 
 .right-2 {
@@ -845,16 +845,8 @@ html
   height: 50%;
 }
 
-.h-3\/5 {
-  height: 60%;
-}
-
 .max-h-\[85vh\] {
   max-height: 85vh;
-}
-
-.max-h-full {
-  max-height: 100%;
 }
 
 .min-h-screen {
@@ -863,10 +855,6 @@ html
 
 .min-h-\[60vh\] {
   min-height: 60vh;
-}
-
-.min-h-\[40\%\] {
-  min-height: 40%;
 }
 
 .w-full {
@@ -969,10 +957,6 @@ html
   justify-content: center;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1041,6 +1025,10 @@ html
   border-radius: 9999px;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .border-4 {
   border-width: 4px;
 }
@@ -1076,6 +1064,10 @@ html
 
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .object-cover {
@@ -1120,6 +1112,21 @@ html
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .text-left {
@@ -1290,6 +1297,11 @@ html
   .sm\:w-3\/4 {
     width: 75%;
   }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1332,11 +1344,6 @@ html
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 
