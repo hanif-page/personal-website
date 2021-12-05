@@ -7,9 +7,9 @@ async function openProjectModal(e)
     projectModal.classList.add("opened")
     
     // get the json
-    const jsonSrc = "./project-information.json"
     const projectID = "project" + e.dataset.id
-    const projectInformation = await getAPI(jsonSrc)
+    const jsonURL = "./project-information.json"
+    var projectInformation = await getAPI(jsonURL) // it will be a global variable, because it will be use more than once
     
     // get the specific project inside the json
     const projectInformationSpecific = projectInformation[projectID]
@@ -77,28 +77,27 @@ async function openProjectModal(e)
             let imgElement = parentContainer.querySelector("img")   
             let numberIndicator = parentContainer.querySelector(".currentIndicatorNumber")
             
+            // get the parent element data-projectID value
+            let projectID = parentContainer.parentElement.dataset.projectid
+
             // get the image element data-imgNumber (so, it will be the current image number)
             let currentImgNumber = +imgElement.dataset.imgnumber      
 
             // imgNumber after getting change by the offset
             let newImgNumber = currentImgNumber + offSet
 
+            // count the length of the object property
+            const imagesMaxLength = Object.keys(projectInformation[projectID].imgSources).length // get the size of the imageSources object
+
             // filter the number, on few condition
-            if(newImgNumber < 1) newImgNumber = 4
-            else if (newImgNumber > 4) newImgNumber = 1;
+            if(newImgNumber < 1) newImgNumber = imagesMaxLength;
+            else if (newImgNumber > imagesMaxLength) newImgNumber = 1;
 
             // renew the actual dataset 
             imgElement.dataset.imgnumber = newImgNumber;
 
-            // get the parent element data-projectID value
-            let projectID = parentContainer.parentElement.dataset.projectid
-
-            // get the json file 
-            const url = "./project-information.json"
-            const projectInformation = await getAPI(url)
-
             // get the new image source from the json  
-            const newImageSrc = projectInformation[projectID].imgSources[`img${newImgNumber}`]
+            const newImageSrc = projectInformation[projectID].imgSources[`img${newImgNumber}`] // use the same variable (projectInformation)
             
             // change the image source and the number indicator
             imgElement.src = newImageSrc
