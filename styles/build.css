@@ -1203,6 +1203,11 @@ html
   color: rgba(51, 51, 51, var(--tw-text-opacity));
 }
 
+.text-my-gray {
+  --tw-text-opacity: 1;
+  color: rgba(83, 83, 83, var(--tw-text-opacity));
+}
+
 .text-my-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -1300,6 +1305,11 @@ html
 .dark .dark\:text-my-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .dark\:text-my-orange {
+  --tw-text-opacity: 1;
+  color: rgba(255, 199, 0, var(--tw-text-opacity));
 }
 
 .dark .dark\:hover\:text-my-orange:hover {
