@@ -24,7 +24,7 @@ async function openProjectModal(e)
 
         <div class="image-slider-container text-my-orange relative h-1/2 w-full lg:h-full lg:w-3/5">
             <i data-slide="-1" class="fas fa-chevron-right py-1 px-1 rounded bg-black bg-opacity-70 text-my-orange cursor-pointer rotate-180 absolute top-1/2 left-2 transform -translate-y-1/2 opacity-80 hover:opacity-100 text-2xl"></i>
-            <span id="img-indicator" class="absolute left-1/2 bottom-1 transform -translate-x-1/2 text-base text-my-orange bg-black bg-opacity-70 py-0 px-1 rounded"><span class="currentIndicatorNumber">1</span> / 4</span>
+            <span id="img-indicator" class="absolute left-1/2 bottom-1 transform -translate-x-1/2 text-base text-my-orange bg-black bg-opacity-70 py-0 px-1 rounded"><span class="currentIndicatorNumber">1</span> / ${Object.keys(projectInformationSpecific.imgSources).length /* total photos */}</span>
             <i data-slide="1" class="fas fa-chevron-right py-1 px-1 rounded bg-black bg-opacity-70 text-my-orange cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2 opacity-80 hover:opacity-100 text-2xl"></i>
 
             <img src="${projectInformationSpecific.imgSources.img1}" alt="Project Image" data-imgNumber="1" class="w-full h-full object-cover">
@@ -76,6 +76,7 @@ async function openProjectModal(e)
             let parentContainer = this.parentElement
             let imgElement = parentContainer.querySelector("img")   
             let numberIndicator = parentContainer.querySelector(".currentIndicatorNumber")
+            let maxNumberIndicator = parentContainer.querySelector(".maxIndicatorNumber")
             
             // get the parent element data-projectID value
             let projectID = parentContainer.parentElement.dataset.projectid
