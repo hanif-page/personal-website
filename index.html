@@ -22,29 +22,15 @@
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typeit@8.0.7/dist/index.umd.js"></script>
 </head>
-<body class="dark:bg-my-black overflow-x-hidden">
+<body class="dark:bg-my-black overflow-x-hidden overflow-hidden">
 
-    <!-- 
-        Checknotes ✅️ 
-        - Make bottom navigation ✅️
-        - Make right navigation ✅️
-        - Setting up the position of the main container, for desktop it will be not in the center, but a little move to the left ✅️
-        - Set the top wavy shape ✅️ 
-        - Make 'about me' section ✅️
-        - Make 'project portfolio' section ✅️
-        - Set up dark mode ✅️
-        - Set typed js (Muhammad Ammar Hanif) ✅️
-        - Make copyright text ✅️
-
-        (break the to do list to each point)
-        - Set the overlay modal (for each project that getting displayed) ...
-        1. Set the container for the project modal/overlay UI ✅️ 
-        2. Make . . .
-        3. Code The . . .
-        
-        
-        - Set up all link inside the website
-     -->
+    <div class="loaderContainer fixed inset-0 z-[99999] pointer-events-none bg-white flex justify-center items-center transition-opacity duration-[1.5s]">
+        <div class="flex space-x-3">
+            <div class="dot1 w-4 h-4 transform bg-my-black rounded-full"></div>
+            <div class="dot2 w-4 h-4 transform bg-my-black rounded-full"></div>
+            <div class="dot3 w-4 h-4 transform bg-my-black rounded-full"></div>
+        </div>
+    </div>
 
     <img src="./assets/wave-top.svg" alt="wave top illustration" class="vector-light absolute z-0 transform rotate-180 w-full">
     <img src="./assets/wave-top-white.svg" alt="white wave top illustration" class="vector-light hidden absolute z-0 transform rotate-180 w-full">

@@ -49,3 +49,12 @@ function closeProjectModal()
     projectModal.classList.remove("opened")
     document.querySelector("body").style.overflow = "auto"
 }
+
+// loading animation
+window.addEventListener('load', () => {
+    const body = document.querySelector("body")
+    const loaderContainer = document.querySelector(".loaderContainer")
+
+    body.classList.remove("overflow-hidden")
+    loaderContainer.classList.add("opacity-0")
+})

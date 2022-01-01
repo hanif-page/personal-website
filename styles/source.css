@@ -49,4 +49,16 @@
         opacity: 1;
         pointer-events: auto;
     }
+
+    .dot1 {animation: jump-up 1s .1s linear infinite}
+    .dot2 {animation: jump-up 1s .2s linear infinite}
+    .dot3 {animation: jump-up 1s .3s linear infinite}
+    @keyframes jump-up 
+    {
+        50% 
+        {
+            transform: translate(0, 18px);
+            opacity: .5;
+        }
+    }
 }
