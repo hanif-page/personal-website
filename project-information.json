@@ -51,5 +51,19 @@
         "liveWebLink": "https://github.com/hanif-page/banking-system",
         "githubRepoLink": "https://github.com/hanif-page/banking-system"
     },
+    "project5": {
+        "imgSources": {
+            "img1": "./assets/img/project/project-5/1.png",
+            "img2": "./assets/img/project/project-5/2.png",
+            "img3": "./assets/img/project/project-5/3.png",
+            "img4": "./assets/img/project/project-5/4.png",
+            "img5": "./assets/img/project/project-5/5.png"
+        },
+        "projectName": "Crypto Dash",
+        "dateFinish": "January 1st 2021",
+        "projectDesc": "Crypto Dash is a website that provide top 100 cryptocurrency live statistics data. Example, like price, market cap, etc. All the data generated from coingecko API, and I use canvasJS for the price visualization in chart.",
+        "liveWebLink": "https://github.com/hanif-page/CryptoDash",
+        "githubRepoLink": "https://cryptoddash.netlify.app/"
+    },
     "error": "Wrong Project ID! Please use the known Project ID"
 }
