@@ -50,11 +50,23 @@ function closeProjectModal()
     document.querySelector("body").style.overflow = "auto"
 }
 
-// loading animation
-window.addEventListener('load', () => {
+const startLoadingAnimation = () => {
     const body = document.querySelector("body")
-    const loaderContainer = document.querySelector(".loaderContainer")
+    const spinnerContainer = document.querySelector('.loaderContainer')
+
+    body.classList.add("overflow-hidden")
+    spinnerContainer.classList.remove("opacity-0")
+}
+
+const stopLoadingAnimation = () => {
+    const body = document.querySelector("body")
+    const spinnerContainer = document.querySelector('.loaderContainer')
 
     body.classList.remove("overflow-hidden")
-    loaderContainer.classList.add("opacity-0")
+    spinnerContainer.classList.add("opacity-0")
+}
+
+// loading animation
+window.addEventListener('load', () => {
+    stopLoadingAnimation();
 })

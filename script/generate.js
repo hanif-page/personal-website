@@ -3,6 +3,8 @@ const projectModal = document.querySelector("#projectModal")
 // open modal/overlay
 async function openProjectModal(e)
 {
+    startLoadingAnimation(); // the function is located on the script.js file
+
     document.querySelector("body").style.overflow = "hidden"
     projectModal.classList.add("opened")
     
@@ -63,7 +65,7 @@ async function openProjectModal(e)
     ` 
     // renew the display
     modalOverlay.innerHTML = modalMainContainer;
-
+    stopLoadingAnimation(); // the function is located on the script.js file
 
     // slide button functionality
     const slideButtons = document.querySelectorAll("[data-slide]")
