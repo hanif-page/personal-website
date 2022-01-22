@@ -26,6 +26,7 @@
 
     <title>M Ammar Hanif | Personal Website</title>
     <link rel="stylesheet" href="./styles/build.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
         /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); */
@@ -131,29 +132,29 @@
 
         <div id="projectPortfolio" class="project-portfolio min-h-screen flex flex-col justify-center items-center space-y-8 mb-24 lg:mb-0">
 
-            <h1 class="text-my-black text-2xl text-center font-bold dark:text-my-white">Project Portfolio</h1>
+            <h1 data-aos-once="true" data-aos-duration="1250" data-aos-offset="200" data-aos="fade-right" class="text-my-black text-2xl text-center font-bold dark:text-my-white">Project Portfolio</h1>
 
             <!-- project thumbnail container -->
             <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div onclick="openProjectModal(this)" data-id="1" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div data-aos-once="true" data-aos-duration="1500" data-aos-offset="200" data-aos="fade-up" onclick="openProjectModal(this)" data-id="1" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-1/1.png" alt="project 1 thumbnail" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div onclick="openProjectModal(this)" data-id="2" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div data-aos-once="true" data-aos-duration="1500" data-aos-offset="200" data-aos="fade-up" onclick="openProjectModal(this)" data-id="2" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-2/1.png" alt="project 2 thumbnail" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div onclick="openProjectModal(this)" data-id="3" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div data-aos-once="true" data-aos-duration="1500" data-aos-offset="200" data-aos="fade-up" onclick="openProjectModal(this)" data-id="3" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-3/1.png" alt="project 3 thumbnail" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div onclick="openProjectModal(this)" data-id="4" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div data-aos-once="true" data-aos-duration="1500" data-aos-offset="200" data-aos="fade-up" onclick="openProjectModal(this)" data-id="4" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-4/1.png" alt="project 4 thumbnail" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
-                <div onclick="openProjectModal(this)" data-id="5" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
+                <div data-aos-once="true" data-aos-duration="1500" data-aos-offset="200" data-aos="fade-up" onclick="openProjectModal(this)" data-id="5" class="group border border-my-black dark:border-my-white overflow-hidden cursor-pointer">
                     <img src="./assets/img/project/project-5/1.png" alt="project 5 thumbnail" class="w-full h-full object-cover object-center transform group-hover:scale-125 transition duration-500">
                 </div>
             </div>
         </div>
 
-        <div class="py-7 relative -top-14 text-my-black capitalize text-center text-sm lg:text-base lg:top-0 lg:pb-2 dark:text-my-white">
+        <div data-aos-duration="750" data-aos-offset="50" data-aos="fade-left" class="py-7 relative -top-14 text-my-black capitalize text-center text-sm lg:text-base lg:top-0 lg:pb-2 dark:text-my-white">
             <span class="text-my-gray dark:text-my-orange font-bold">coded by</span> - m ammar hanif
         </div>
     </div>
@@ -211,5 +212,10 @@
 
     <script src="script/script.js"></script>
     <script src="script/generate.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
