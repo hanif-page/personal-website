@@ -60,7 +60,7 @@
             "img5": "./assets/img/project/project-5/5.png"
         },
         "projectName": "Crypto Dash",
-        "dateFinish": "January 1st 2021",
+        "dateFinish": "January 1st 2022",
         "projectDesc": "Crypto Dash is a website that provide top 100 cryptocurrency live statistics data. Example, like price, market cap, etc. All the data generated from coingecko API, and I use canvasJS for the price visualization in chart.",
         "liveWebLink": "https://cryptoddash.netlify.app/",
         "githubRepoLink": "https://github.com/hanif-page/CryptoDash"
