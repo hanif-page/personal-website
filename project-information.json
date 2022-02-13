@@ -65,5 +65,17 @@
         "liveWebLink": "https://cryptoddash.netlify.app/",
         "githubRepoLink": "https://github.com/hanif-page/CryptoDash"
     },
+    "project6": {
+        "imgSources": {
+            "img1": "./assets/img/project/project-6/1.png",
+            "img2": "./assets/img/project/project-6/2.png",
+            "img3": "./assets/img/project/project-6/3.png"
+        },
+        "projectName": "Periodic Table Information",
+        "dateFinish": "February 12th 2022",
+        "projectDesc": "Choose and click one of the elements on the box, then it will display the basic element information (atomic number, atomic mass, e.t.c). Build it with HTML, TailwindCSS, Javascript, and API from <a class='underline hover:opacity-50' target='_blank' href='https://github.com/neelpatel05/periodic-table-api'>neelpatel05</a>.",
+        "liveWebLink": "https://periodic-table-information.netlify.app/",
+        "githubRepoLink": "https://github.com/hanif-page/periodic-table-information"
+    },
     "error": "Wrong Project ID! Please use the known Project ID"
 }
